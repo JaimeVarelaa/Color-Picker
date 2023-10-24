@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0F1C2E"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#303D5A80"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.example.colorpicker.selectColor
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/rueda"
+            android:layout_width="250dp"
+            android:layout_height="250dp" />
+
+        <com.example.colorpicker.SelectColorVar
+            android:id="@+id/barra"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="250dp" />
+
+        <com.example.colorpicker.SelectAlpha
+            android:id="@+id/alpha"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="250dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/BtnSeleccionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Color"
+        android:backgroundTint="#303D5A80">
+    </Button>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color actual: " />
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color anterior: " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/ColorActual"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="#FF0000" />
+            <View
+                android:id="@+id/ColorAnterior"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitEnd"
+            android:visibility="invisible"
+            android:src="@drawable/copy">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEX">
+            </TextView>
+
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@+id/TextHex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#123456">
+            </TextView>
+        </LinearLayout>
+    <ImageButton
+        android:id="@+id/BtnCopyHex"
+        android:layout_gravity="center_vertical"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/copy">
+    </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitEnd"
+            android:visibility="invisible"
+            android:src="@drawable/copy">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARGB">
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:id="@+id/TextAlpha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:id="@+id/TextRGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=",0,0,0">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/BtnCopyRGB"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/copy">
+        </ImageButton>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+</LinearLayout>
